@@ -1,0 +1,77 @@
+<!-- portfolio.html -->
+<section class="pt-24 pb-16">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center text-dark mb-12">Mi Portafolio</h1>
+        
+        <!-- Filtros -->
+        <div class="flex justify-center mb-8">
+            <div class="flex flex-wrap gap-2">
+                <button class="filter-btn px-4 py-2 rounded-lg bg-primary text-white" data-filter="all">Todos</button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300" data-filter="web">Web</button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300" data-filter="mobile">Móvil</button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300" data-filter="design">Diseño</button>
+            </div>
+        </div>
+        
+        <!-- Grid de Proyectos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Proyecto 1 -->
+            <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow" data-category="web">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Proyecto Web" 
+                     class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-dark mb-2">E-commerce Moderno</h3>
+                    <p class="text-gray-600 mb-4">Plataforma completa de comercio electrónico</p>
+                    <button onclick="openModal('modal1')" 
+                            class="text-primary hover:text-secondary transition-colors font-semibold">
+                        Ver detalles →
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Más proyectos... -->
+        </div>
+    </div>
+</section>
+
+<!-- Modal para Proyecto 1 -->
+<div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-xl max-w-4xl max-h-[90vh] overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-dark">E-commerce Moderno</h3>
+                <button onclick="closeModal('modal1')" class="text-gray-500 hover:text-dark">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                 alt="Proyecto completo" 
+                 class="w-full h-auto rounded-lg mb-6">
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-bold text-dark mb-2">Descripción</h4>
+                    <p class="text-gray-600">Plataforma de comercio electrónico desarrollada con React en el frontend y Node.js en el backend. Incluye carrito de compras, sistema de autenticación, pasarela de pago y panel de administración.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-dark mb-2">Tecnologías</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-primary text-white px-3 py-1 rounded-full">React</span>
+                        <span class="bg-secondary text-white px-3 py-1 rounded-full">Node.js</span>
+                        <span class="bg-dark text-white px-3 py-1 rounded-full">MongoDB</span>
+                        <span class="bg-purple-500 text-white px-3 py-1 rounded-full">Express</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition">Ver Proyecto en Vivo</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80
